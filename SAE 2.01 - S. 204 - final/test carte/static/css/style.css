@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(143, 191, 243, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.inter-header {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(143, 191, 243, 0.8);
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li:hover a {
+    display: block;
+}
+
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    white-space: nowrap;
+    color: white;
+    margin: 0;
+}
+
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.presentation {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    width: 50vw;
+    font-size: larger;
+    color: #000;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+footer {
+    background-color: rgba(143, 191, 243, 0.8);
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    margin-top: 1%;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+#map {
+    height: 450px;
+    width: 25%;
+    position: sticky;
+    float: right;
+    right: 1%;
+    top: calc(50% - 175px);
+    border-radius: 15px;
+}
+
+.stations {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.stations .flex {
+    min-height: calc(405px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stations .flex form {
+    background-color: var(--light-white);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.stations .flex form h3,
+h3 {
+    font-size: 2.5rem;
+    color: white;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    border-radius: 12px;
+    padding: 1rem 3rem;
+    background: rgba(89, 144, 204, 0.69);
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: .5s;
+    font-size: larger;
+}
+
+#departement,
+#departement option {
+    display: block;
+    border-radius: 12px;
+    padding: 1rem 3rem;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: .5s;
+    background-color: #e0f2fe;
+}
+
+#departement {
+    font-size: larger;
+}
+
+.flex #station:hover,
+.flex .btn:hover {
+    background: transparent;
+    color: #e6f0ff;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#station {
+    margin-bottom: 1%;
+}
+
+.container.stations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 70%;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 6%;
+    border-radius: 15px;
+    padding: 0 2% 2% 2%;
+}
+
+section.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.reg_dept {
+    display: flex;
+    margin-bottom: 1%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ddd;
+    background: #5b565693;
+    border-radius: 15px;
+}
+
+th,
+td {
+    padding: 1%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 20vw;
+}
+
+td {
+    border-top: 1px solid #ddd;
+}
+
+table a {
+    text-decoration: none;
+    color: #7b9329;
+}
+
+table a:hover {
+    color: #25aba9;
+}
+
+
+th {
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #000;
+}
+
+/* Contact Form Styles */
+.contact-container {
+    width: 52%;
+    display: flex;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    padding: 2%;
+    position: fixed;
+    top: calc(50% - 190px);
+    left: 24%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    padding-right: 10px;
+    border-right: solid 2px;
+}
+
+.contact_form label {
+    margin-top: 10px;
+    color: white;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    background: rgba(100, 100, 100, .8);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact_form input[type="text"]::placeholder,
+.contact_form input[type="email"]::placeholder,
+.contact_form textarea::placeholder {
+    color: #444;
+}
+
+
+.contact_form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact_form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact_form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Social Media Links (reseaux) */
+.reseaux {
+    padding-left: 10px;
+    justify-content: center;
+    align-self: center;
+}
+
+.reseaux p {
+    margin: 0;
+
+}
+
+.social {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 1%;
+}
+
+.social img {
+    padding: 1%;
+    height: auto;
+    transition: 0.1s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+.adresse {
+    margin-bottom: 1%;
+
+}
+
+.dept input,
+.dept button {
+    font-size: larger;
+    width: 50vw;
+    height: 6vh;
+    margin: .5%;
+    border-radius: 10px;
+    border: none;
+    background-color: #0007;
+    color: #e0f2fe;
+    transition: ease .5s;
+}
+
+.dept input:hover,
+.dept button:hover {
+    background-color: #fff7;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.dept {
+    text-align: center;
+}
+
+.container.campagnes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 70%;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 6%;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.code {
+    text-align: center;
+}
+
+.retour {
+    background: transparent;
+    border: none;
+}
+
+#retour {
+    /* width: 50px; */
+    transform: rotateZ(180);
+}
+
+.retour_1 {
+    text-align: center;
+
+}
+
+.affiche table {
+    margin-bottom: 1%;
+}
